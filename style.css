@@ -8,7 +8,7 @@ main{
   background: linear-gradient(180deg, black, rgb(7, 1, 100));
   text-align: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 
@@ -25,6 +25,7 @@ text-align: middle;
 }
 
 .display{
+  gap: 30px;
   align-items: center;
   width: 80%;
   padding-left: 15%;
@@ -82,6 +83,7 @@ padding-bottom: 20px;
 }
 
 .front{
+  background-image: url(img/frente_colegio.jpg);
   width: 100%;
   margin-top: 0%;
   padding-top: 100px;
@@ -90,7 +92,7 @@ padding-bottom: 20px;
   align-items: center;
   text-align: center;
   color:white;
-  padding-top: 0%;
+  padding-top: 8%;
 }
 
 .subtitle {
