@@ -671,3 +671,255 @@ a:hover {
     font-size: 1.25rem;
   }
 }
+
+/* Schedule Section */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .schedule-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.schedule-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.schedule-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.schedule-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary);
+}
+
+.schedule-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.schedule-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
+  border-radius: inherit;
+}
+
+.schedule-icon.day1 {
+  background: linear-gradient(135deg, var(--color-blue), #1e40af);
+}
+
+.schedule-icon.day2 {
+  background: linear-gradient(135deg, var(--color-green), #059669);
+}
+
+.schedule-icon.day3 {
+  background: linear-gradient(135deg, var(--color-red), #dc2626);
+}
+
+.schedule-icon.day4 {
+  background: linear-gradient(135deg, var(--color-orange), #ea580c);
+}
+
+.schedule-icon svg {
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.schedule-day h3 {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.schedule-date {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.schedule-content {
+  padding: 1.5rem;
+}
+
+.schedule-content h4 {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.schedule-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.schedule-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.schedule-list li:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-text);
+}
+
+.time {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 3.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.schedule-footer {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--border-radius-xl);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.schedule-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .schedule-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.info-item .icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Animation for schedule cards */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.schedule-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.schedule-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.schedule-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.schedule-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments for schedule */
+@media (max-width: 640px) {
+  .schedule-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .schedule-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .schedule-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .schedule-content h4 {
+    font-size: 1rem;
+  }
+
+  .schedule-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .time {
+    align-self: flex-start;
+  }
+}
