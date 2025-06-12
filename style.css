@@ -26,6 +26,7 @@ text-align: middle;
 }
 
 .display{
+  margin: 0 auto;
   border-spacing: 60px; /* Define o espaçamento entre as linhas e colunas */
   gap: 20px;
   align-items: center;
