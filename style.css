@@ -133,100 +133,9 @@ a:hover {
   }
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 5rem;
-  background-color: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(8px);
-  z-index: 50;
-  transition: width 0.3s ease;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.sidebar:hover {
-  width: 16rem;
-}
-
-.sidebar-header {
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 1.25rem;
-  gap: 1rem;
-}
-
-.logo-circle {
-  width: 3rem;
-  height: 3rem;
-  background-color: var(--color-primary);
-  border-radius: var(--border-radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.logo-circle span {
-  color: white;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.sidebar-title {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.sidebar:hover .sidebar-title {
-  opacity: 1;
-}
-
-.sidebar-title h2 {
-  color: var(--color-text);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.sidebar-nav {
-  margin-top: 1.25rem;
-}
-
-.sidebar-nav ul {
-  list-style: none;
-}
-
-.sidebar-link {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1.25rem;
-  color: var(--color-text);
-  transition: background-color 0.2s ease;
-}
-
-.sidebar-link:hover {
-  background-color: var(--color-primary);
-  border-radius: var(--border-radius);
-  color: var(--color-text);
-}
-
-.sidebar-link span {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.sidebar:hover .sidebar-link span {
-  opacity: 1;
-}
-
 /* Main Content */
 .main-content {
-  margin-left: 5rem;
+  width: 100%;
 }
 
 /* Hero Section */
@@ -922,4 +831,11 @@ a:hover {
   .time {
     align-self: flex-start;
   }
+}
+
+/* Phone mask styling */
+.phone-mask {
+  letter-spacing: 0.5px;
+  font-family: monospace;
+  font-size: 1.1rem;
 }
