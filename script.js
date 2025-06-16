@@ -70,7 +70,7 @@
       });
 
 
-const script_do_google = 'https://script.google.com/macros/s/AKfycbyRGhif5NaKkEFyHA5CTJCQQ5zQ01gAC-OpOM-vkWraRJyyaNAlKpmw19_Q2eIV2Rsg/exec'
+const script_do_google = 'https://script.google.com/macros/s/AKfycbyRGhif5NaKkEFyHA5CTJCQQ5zQ01gAC-OpOM-vkWraRJyyaNAlKpmw19_Q2eIV2Rsg/exec';
 const dados_do_formulario = document.forms['formulario-contato'];
 
 dados_do_formulario.addEventListener('submit', function (e) {
