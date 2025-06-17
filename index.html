@@ -314,7 +314,7 @@
             <p class="cartao-descricao">Preencha todos os campos obrigatórios</p>
           </div>
           <div class="cartao-conteudo">
-            <form id="formularioInscricao" class="formulario" method="post" action"" name="formulario-contato">
+            <form id="formularioInscricao" class="formulario" method="POST" action="https://script.google.com/macros/s/AKfycbwuJoZdeQl6zSQIXrViPaiqx2RNMM1Zqiviyeh1QNhk5uRLsHpsMiaIEZnjMNqQEn8G/exec" name="formulario-contato">
               <div class="abas">
                 <div class="lista-abas">
                   <button type="button" class="botao-aba ativo" data-tab="aluno">Alunos Barbosa</button>
@@ -325,23 +325,23 @@
                   <div class="grade-formulario">
                     <div class="grupo-formulario">
                       <label for="nome-aluno" class="rotulo-formulario">Nome Completo *</label>
-                      <input type="text" id="nome-aluno" name="nome" class="entrada-formulario" required>
+                      <input type="text" id="nome-aluno" name="nome" class="entrada-formulario">
                     </div>
                     <div class="grupo-formulario">
                       <label for="email-aluno" class="rotulo-formulario">Email *</label>
-                      <input type="email" id="email-aluno" name="email" class="entrada-formulario" required>
+                      <input type="email" id="email-aluno" name="email" class="entrada-formulario">
                     </div>
                   </div>
 
                   <div class="grupo-formulario">
                     <label for="telefone-aluno" class="rotulo-formulario">Telefone *</label>
-                    <input type="tel" id="telefone-aluno" name="telefone" class="entrada-formulario mascara-telefone" placeholder="(XX)XXXXX-XXXX" maxlength="15" required>
+                    <input type="tel" id="telefone-aluno" name="telefone" class="entrada-formulario mascara-telefone" placeholder="(XX)XXXXX-XXXX" maxlength="15">
                   </div>
 
                   <div class="grade-formulario">
                     <div class="grupo-formulario">
                       <label for="serie" class="rotulo-formulario">Série *</label>
-                      <select id="serie" name="serie" class="selecao-formulario" required>
+                      <select id="serie" name="serie" class="selecao-formulario">
                         <option value="" disabled selected>Selecione sua série</option>
                         <option value="1ano">1º Ano</option>
                         <option value="2ano">2º Ano</option>
@@ -351,7 +351,7 @@
 
                     <div class="grupo-formulario">
                       <label for="curso" class="rotulo-formulario">Curso *</label>
-                      <select id="curso" name="curso" class="selecao-formulario" required>
+                      <select id="curso" name="curso" class="selecao-formulario">
                         <option value="" disabled selected>Selecione seu curso</option>
                         <option value="ensino-medio">Ensino Médio NEM</option>
                         <option value="desenvolvimento">Técnico em Desenvolvimento de Sistemas</option>
@@ -368,23 +368,35 @@
                   <div class="grade-formulario">
                     <div class="grupo-formulario">
                       <label for="nome-visitante" class="rotulo-formulario">Nome Completo *</label>
-                      <input type="text" id="nome-visitante" name="nome" class="entrada-formulario" required>
+                      <input type="text" id="nome-visitante" name="nome_visita" class="entrada-formulario">
                     </div>
                     <div class="grupo-formulario">
                       <label for="email-visitante" class="rotulo-formulario">Email *</label>
-                      <input type="email" id="email-visitante" name="email" class="entrada-formulario" required>
+                      <input type="email" id="email-visitante" name="email_visita" class="entrada-formulario">
                     </div>
                   </div>
 
                   <div class="grupo-formulario">
                     <label for="telefone-visitante" class="rotulo-formulario">Telefone *</label>
-                    <input type="tel" id="telefone-visitante" name="telefone" class="entrada-formulario mascara-telefone" placeholder="(XX)XXXXX-XXXX" maxlength="15" required>
+                    <input type="tel" id="telefone-visitante" name="telefone_visita" class="entrada-formulario mascara-telefone" placeholder="(XX)XXXXX-XXXX" maxlength="15">
                   </div>
 
                   <div class="grade-formulario">
                     <div class="grupo-formulario">
                       <label for="instituicao" class="rotulo-formulario">Instituição/Empresa</label>
-                      <input type="text" id="instituicao" name="instituicao" class="entrada-formulario" placeholder="Nome da sua instituição">
+                      <select id="instituicao" name="instituicao" class="selecao-formulario">
+                        <option value="" disabled selected>Selecione uma escola</option>
+                        <option value="avulso">Avulso</option>
+                        <option value="antonio_diniz">Antônio Diniz Pereira</option>
+                        <option value="bento_mossurunga">Bento Mossurunga</option>
+                        <option value="cbja">CBJA</option>
+                        <option value="barao_cerro">Barão do Cerro Azul</option>
+                        <option value="idalia_rocha">Idália Rocha</option>
+                        <option value="jose_mattos">José de Mattos Leão</option>
+                        <option value="nilo_pecanha">Nilo Peçanha</option>
+                        <option value="santa_barbara">Santa Bárbara</option>
+                        <option value="outros">Outros</option>
+                      </select>
                     </div>
 
                     <div class="grupo-formulario">
