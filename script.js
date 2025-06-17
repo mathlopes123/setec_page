@@ -78,6 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
   formulario.addEventListener("submit", (e) => {
     e.preventDefault()
 
+    const botaoSubmit = formulario.querySelector('button[type="submit"]')
+    botaoSubmit.disabled = true
+    botaoSubmit.textContent = "Enviando..."
+
     const abaAtiva = document.querySelector(".conteudo-aba.ativo").id.replace("-conteudo", "")
     const abaAtivaElement = document.getElementById(`${abaAtiva}-conteudo`)
     const camposObrigatorios = abaAtivaElement.querySelectorAll("input[required], select[required]")
@@ -102,10 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (primeiroErro) {
         primeiroErro.focus()
       }
+      botaoSubmit.disabled = false
+      botaoSubmit.textContent = "Enviar"
       return
     }
 
-    // Enviar via fetch
     const dados = new FormData(formulario)
 
     fetch(formulario.action, {
@@ -121,10 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           alert("Ocorreu um erro no envio. Tente novamente.")
         }
+        botaoSubmit.disabled = false
+        botaoSubmit.textContent = "Enviar"
       })
       .catch((err) => {
         alert("Erro na conexão. Verifique sua internet ou tente mais tarde.")
         console.error(err)
+        botaoSubmit.disabled = false
+        botaoSubmit.textContent = "Enviar"
       })
   })
 })
